@@ -8,7 +8,14 @@ function createGrid(numberToCreate) {
         div.style.width = "100px";
         div.style.height = "100px";
         containerDiv.appendChild(div);
+
+        div.addEventListener('mouseover', function() { addHoverEffect(div); });
     }
+}
+
+// Add a hover effect to the div.
+function addHoverEffect(div) {
+    div.style.backgroundColor = "black";
 }
 
 createGrid(16);

@@ -12,6 +12,13 @@ body {
     background-color:#2f424f;
 }
 
+.title { 
+    font-size: xx-large;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 32px;
+}
+
 .container {
     width: 408px;
     border: 8px solid #695c79;
