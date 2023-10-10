@@ -21,13 +21,9 @@ body {
 
 .container {
     width: 408px;
+    height: 408px;
     border: 8px solid #695c79;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
-}
-
-.square {
-    background-color: #ffffff;
-    border: 1px solid black;
 }
