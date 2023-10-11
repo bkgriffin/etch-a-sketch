@@ -20,12 +20,16 @@ input {
     border-radius: 8px;
     padding: 8px 24px;
     width: 50px;
-    margin-bottom: 16px;
+    height: 20px;
   }
 
 button {
+    width: 150px;
+    font-size: 14px;
     border-radius: 8px;
-    background: #eee;
+    border-style:solid;
+    color: white;
+    background-color:#695c79;
     padding: 8px 16px;
   }
 
@@ -45,16 +49,25 @@ button {
     flex-wrap: wrap;
 }
 
-.x-axis-container {
-
+.x-axis-container,
+.y-axis-container {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
 }
 
-.y-axis-container { 
-  
+.button-container { 
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 24px;
 }
 
 body, 
 label, 
 button {
-  font-family: Roboto, sans-serif;
+    font-family: Roboto, sans-serif;
 }
