@@ -1,6 +1,10 @@
 // Pixel density of the border around each square.
 const SQUARE_BORDER_PIXEL_DENSITY = 1;
 
+// Original grid size.
+const ORIGINAL_GRID_X_AXIS = 16;
+const ORIGINAL_GRID_Y_AXIS = 16;
+
 // Create squares representing an Etch-a-Sketch grid.
 function createGrid(squaresXAxis, squaresYAxis) { 
     const containerDiv = document.querySelector(".container");
@@ -40,10 +44,13 @@ function addHoverEffect(div) {
     div.style.backgroundColor = "black";
 }
 
-// Add an event listener for the 'Generate Grid' button.
-function addGenerateGridButtonEventListener() {
+// Add an event listener for the 'Generate Grid' and 'Reset' buttons.
+function addButtonEventListeners() {
     const generateGridButton = document.querySelector(".generate-button");
     generateGridButton.addEventListener('click', function() { createUserDefinedGrid() });
+
+    const resetButton = document.querySelector(".reset-button");
+    resetButton.addEventListener('click', function() { resetGrid() });
 }
 
 // Create the Etch-a-Sketch grid using user-defined values.
@@ -54,6 +61,12 @@ function createUserDefinedGrid() {
     createGrid(xAxis.value, yAxis.value);
 }
 
+// Create the Etch-a-Sketch grid using original proportions.
+function resetGrid() {
+    deleteGrid();
+    createGrid(ORIGINAL_GRID_X_AXIS, ORIGINAL_GRID_Y_AXIS);
+}
+
 // Delete the squares inside of the Etch-a-Sketch grid.
 function deleteGrid() {
     const containerDiv = document.querySelector(".container");
@@ -61,10 +74,9 @@ function deleteGrid() {
 }
 
 // TODO: 
-// - Style the x-axis/y-axis/button elements
 // - Check x-axis and y-axis inputs for valid input (1-100, no decimal numbers)
 // - Different pen color? 
 // - In rare instances, the number of x/y input to generate grid will cause the squares to wrap.
 
-addGenerateGridButtonEventListener();
-createGrid(10, 10);
+addButtonEventListeners();
+createGrid(ORIGINAL_GRID_X_AXIS, ORIGINAL_GRID_Y_AXIS);
