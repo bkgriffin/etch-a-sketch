@@ -14,18 +14,17 @@
 
   <div class="x-axis-container">
     <label for="x-axis">Squares (X-Axis): (between 1 and 100)</label>
-    <input type="number" class="x-axis" name="x-axis" min="1" max="100">
+    <input type="number" class="x-axis" name="x-axis" min="1" max="100" value="16" onkeypress="return validateInput(event)">
   </div>
 
   <div class="y-axis-container">
     <label for="y-axis">Squares (Y-Axis): (between 1 and 100)</label>
-    <input type="number" class="y-axis" name="y-axis" min="1" max="100">
+    <input type="number" class="y-axis" name="y-axis" min="1" max="100" value="16" onkeypress="return validateInput(event)">
   </div>
 
   <div class="button-container">
     <button class="generate-button">Generate Grid</button>
     <button class="reset-button">Reset</button>
   </div>
-
 </body>
 </html>
