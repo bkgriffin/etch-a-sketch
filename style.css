@@ -4,13 +4,30 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color:#2f424f;
 }
+
+label { 
+    color: #ffffff;
+}
+
+input {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 24px;
+    width: 50px;
+    margin-bottom: 16px;
+  }
+
+button {
+    border-radius: 8px;
+    background: #eee;
+    padding: 8px 16px;
+  }
 
 .title { 
     font-size: xx-large;
@@ -26,4 +43,18 @@ body {
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.x-axis-container {
+
+}
+
+.y-axis-container { 
+  
+}
+
+body, 
+label, 
+button {
+  font-family: Roboto, sans-serif;
 }
