@@ -103,9 +103,5 @@ function validateInput(event) {
     return true;
 }
 
-// TODO: 
-// - Different pen color? 
-// - In some instances, the number of x/y input to generate grid will cause the squares to wrap.
-
 addButtonEventListeners();
 createGrid(ORIGINAL_GRID_X_AXIS, ORIGINAL_GRID_Y_AXIS);
